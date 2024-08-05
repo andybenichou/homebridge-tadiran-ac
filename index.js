@@ -17,6 +17,9 @@ module.exports = function(homebridge) {
 		hap: {Characteristic, Service, Accessory: {Categories}, uuid: UUID}
 	} = homebridge);
 
+	console.log("Characteristic:", Characteristic);  // Log Characteristic to ensure it's correctly assigned
+	console.log("Characteristic.Perms:", Characteristic.Perms);  // Log Characteristic.Perms to ensure it exists
+
 	homebridge.registerPlatform(PLUGIN_NAME, PLATFORM_NAME, TadiranAC, true);
 };
 
